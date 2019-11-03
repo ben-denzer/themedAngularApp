@@ -1,0 +1,19 @@
+@import '../../colors.scss';
+
+@include useTheme($themes) {
+  .centerPanel {
+    height: 100%;
+    width: 60vw;
+    border: 1px solid themed('foregroundColor');
+    background-color: themed('backgroundColor');
+    color: themed('foregroundColor');
+
+    .if {
+      color: themed('color1');
+    }
+
+    .stringArg {
+      color: themed('color2');
+    }
+  }
+}

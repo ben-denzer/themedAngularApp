@@ -1,0 +1,11 @@
+@import '../../colors.scss';
+
+@include useTheme($themes) {
+  .rightPanel {
+    height: 100%;
+    border: 1px solid themed('foregroundColor');
+    width: 20vw;
+    background-color: themed('backgroundColor');
+    color: themed('foregroundColor');
+  }
+}

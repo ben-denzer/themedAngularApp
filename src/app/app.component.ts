@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService, ThemeType } from './theme.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'themed-app';
+  private theme: ThemeType = 'LIGHT';
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit() {
+    this.themeService.theme.subscribe((theme: ThemeType) => {
+      this.theme = theme;
+    });
+  }
 }
